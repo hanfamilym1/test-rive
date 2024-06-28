@@ -18,7 +18,7 @@ const r = new rive.Rive({
     
 
     function onRiveEventReceived(riveEvent) {
-      console.log(riveEvent)
+      console.log('riveEvent', riveEvent)
       /*(const eventData = riveEvent.data;
       const eventProperties = eventData.properties;
       if (eventData.type === RiveEventType.General) {
