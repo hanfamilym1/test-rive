@@ -78,12 +78,9 @@ const libraryCanvas = new rive.Rive({
         // Added relevant metadata from the event
         console.log("Clicked", eventProperties.clicked);
         const elemId = "Coffee";
-          const popupContent = document.getElementById(elemId);
-          popupContent.style.visibility = "visible";
-      } else if (eventData.type === RiveEventType.OpenUrl) {
-        console.log("Event name", eventData.name);
-        window.open(eventData.url);
-      }
+        const popupContent = document.getElementById(elemId);
+        popupContent.style.visibility = "visible";
+      } 
     }
 
 
