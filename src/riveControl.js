@@ -10,7 +10,7 @@ const libraryCanvas = new rive.Rive({
     onLoad: () => {
       libraryCanvas.resizeDrawingSurfaceToCanvas();
     },
-    onStateChange: (riveEvent) => {
+    /*onStateChange: (riveEvent) => {
       const newStates = riveEvent.data;
       console.log(newStates);
       newStates.forEach((state) => {
@@ -67,7 +67,7 @@ const libraryCanvas = new rive.Rive({
           buttonCanvasExample.style.cursor = "pointer";
         }
       });
-      }
+      }*/
     });
 
     function onRiveEventReceived(riveEvent) {
