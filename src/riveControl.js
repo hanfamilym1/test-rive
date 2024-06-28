@@ -11,7 +11,37 @@ const r = new rive.Rive({
     onLoad: () => {
       r.resizeDrawingSurfaceToCanvas();
     },
-    /*onStateChange: (riveEvent) => {
+    });
+
+    
+
+    function onRiveEventReceived(riveEvent) {
+      console.log(riveEvent)
+      /*(const eventData = riveEvent.data;
+      const eventProperties = eventData.properties;
+      if (eventData.type === RiveEventType.General) {
+        console.log("Coffee_Clicked", eventData.name);
+        // Added relevant metadata from the event
+        console.log("Coffee_Clicked", eventProperties.Coffee_Clicked);
+        const elemId = "Coffee";
+        const popupContent = document.getElementById(elemId);
+        popupContent.style.visibility = "visible";
+      } */
+    }
+
+    r.on(EventType.RiveEvent, onRiveEventReceived);
+
+
+
+  function hideVid() {
+
+    const popupContent = document.getElementById("popupContent");
+    popupContent.style.visibility = "hidden";
+
+  }
+
+
+      /*onStateChange: (riveEvent) => {
       const newStates = riveEvent.data;
       console.log(newStates);
       newStates.forEach((state) => {
@@ -69,36 +99,3 @@ const r = new rive.Rive({
         }
       });
       }*/
-    });
-
-    function onRiveEventReceived(riveEvent) {
-      console.log(riveEvent)
-      /*(const eventData = riveEvent.data;
-      const eventProperties = eventData.properties;
-      if (eventData.type === RiveEventType.General) {
-        console.log("Coffee_Clicked", eventData.name);
-        // Added relevant metadata from the event
-        console.log("Coffee_Clicked", eventProperties.Coffee_Clicked);
-        const elemId = "Coffee";
-        const popupContent = document.getElementById(elemId);
-        popupContent.style.visibility = "visible";
-      } */
-    }
-
-    r.on(EventType.RiveEvent, onRiveEventReceived);
-
-/*window.addEventListener(
-  "resize",
-  () => {
-    r.resizeDrawingSurfaceToCanvas();
-  },
-  false
-);*/
-
-
-  function hideVid() {
-
-    const popupContent = document.getElementById("popupContent");
-    popupContent.style.visibility = "hidden";
-
-  }
