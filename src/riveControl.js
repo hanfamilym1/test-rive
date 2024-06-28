@@ -72,7 +72,8 @@ const r = new rive.Rive({
     });
 
     function onRiveEventReceived(riveEvent) {
-      const eventData = riveEvent.data;
+      console.log(riveEvent)
+      /*(const eventData = riveEvent.data;
       const eventProperties = eventData.properties;
       if (eventData.type === RiveEventType.General) {
         console.log("Coffee_Clicked", eventData.name);
@@ -81,7 +82,7 @@ const r = new rive.Rive({
         const elemId = "Coffee";
         const popupContent = document.getElementById(elemId);
         popupContent.style.visibility = "visible";
-      } 
+      } */
     }
 
     r.on(EventType.RiveEvent, onRiveEventReceived);
