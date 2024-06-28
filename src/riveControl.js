@@ -2,11 +2,11 @@
 let buttonCanvasExample = document.getElementById("canvas");
 
 const libraryCanvas = new rive.Rive({
-    src: "https://dlsubzh.github.io/ubjahresbericht22/assets/rive/ub_jahresbericht_final.riv",
+    src: "https://dlsubzh.github.io/ubjahresbericht23/assets/rive/ub_jahresbericht23.riv",
     canvas: document.getElementById("canvas"),
     autoplay: true,
-    artboard: "UBJahresbericht22",
-    stateMachines: ["UBJahresbericht22"],
+    artboard: "UBJahresbericht23",
+    stateMachines: ["UBJahresbericht23"],
     onLoad: () => {
       libraryCanvas.resizeDrawingSurfaceToCanvas();
     },
@@ -69,6 +69,20 @@ const libraryCanvas = new rive.Rive({
       });
       }
     });
+
+    function onRiveEventReceived(riveEvent) {
+      const eventData = riveEvent.data;
+      const eventProperties = eventData.properties;
+      if (eventData.type === RiveEventType.General) {
+        console.log("Event name", eventData.name);
+        // Added relevant metadata from the event
+        console.log("Rating", eventProperties.rating);
+        console.log("Message", eventProperties.message);
+      } else if (eventData.type === RiveEventType.OpenUrl) {
+        console.log("Event name", eventData.name);
+        window.open(eventData.url);
+      }
+    }
 
 
   function hideVid() {
