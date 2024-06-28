@@ -7,7 +7,7 @@ const r = new rive.Rive({
     autoplay: true,
     artboard: "UBJahresbericht23",
     stateMachines: ["UBJahresbericht23"],
-    automaticallyHandleEvents: true, 
+    //automaticallyHandleEvents: true, 
     onLoad: () => {
       r.resizeDrawingSurfaceToCanvas();
     },
