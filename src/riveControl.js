@@ -1,14 +1,15 @@
 
 let buttonCanvasExample = document.getElementById("canvas");
 
-const libraryCanvas = new rive.Rive({
+const r = new rive.Rive({
     src: "https://dlsubzh.github.io/ubjahresbericht23/assets/rive/ub_jahresbericht23.riv",
     canvas: document.getElementById("canvas"),
     autoplay: true,
     artboard: "UBJahresbericht23",
     stateMachines: ["UBJahresbericht23"],
+    automaticallyHandleEvents: true, 
     onLoad: () => {
-      libraryCanvas.resizeDrawingSurfaceToCanvas();
+      r.resizeDrawingSurfaceToCanvas();
     },
     /*onStateChange: (riveEvent) => {
       const newStates = riveEvent.data;
@@ -74,9 +75,9 @@ const libraryCanvas = new rive.Rive({
       const eventData = riveEvent.data;
       const eventProperties = eventData.properties;
       if (eventData.type === RiveEventType.General) {
-        console.log("Event name", eventData.name);
+        console.log("Coffee_Clicked", eventData.name);
         // Added relevant metadata from the event
-        console.log("Clicked", eventProperties.clicked);
+        console.log("Coffee_Clicked", eventProperties.Coffee_Clicked);
         const elemId = "Coffee";
         const popupContent = document.getElementById(elemId);
         popupContent.style.visibility = "visible";
