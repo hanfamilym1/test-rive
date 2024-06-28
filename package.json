@@ -2,9 +2,13 @@
   "name": "ub-zurich-jahresbericht",
   "version": "1.0.0",
   "scripts": {
-    "build": "cp -R . dist"
+    "build": "parcel build src/index.html --dist-dir dist",
+    "start": "parcel src/index.html"
   },
   "dependencies": {
     "@rive-app/canvas": "^2.17.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
   }
 }
