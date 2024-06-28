@@ -1,4 +1,5 @@
-import { Rive, Fit, Layout, EventType } from "@rive-app/canvas";
+import { Rive, EventType, RiveEventType } from '@rive-app/canvas'
+
 let buttonCanvasExample = document.getElementById("canvas");
 
 
