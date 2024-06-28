@@ -1,5 +1,6 @@
-
+import {Rive, EventType} from '@rive-app/canvas';
 let buttonCanvasExample = document.getElementById("canvas");
+
 
 const r = new rive.Rive({
     src: "https://dlsubzh.github.io/ubjahresbericht23/assets/rive/ub_jahresbericht23.riv",
