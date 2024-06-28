@@ -2,7 +2,7 @@
   "name": "ub-zurich-jahresbericht",
   "version": "1.0.0",
   "scripts": {
-    "build": "parcel build src/index.html --dist-dir dist",
+    "build": "parcel build index.html --dist-dir dist",
     "start": "parcel src/index.html"
   },
   "dependencies": {
