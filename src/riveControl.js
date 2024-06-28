@@ -76,8 +76,10 @@ const libraryCanvas = new rive.Rive({
       if (eventData.type === RiveEventType.General) {
         console.log("Event name", eventData.name);
         // Added relevant metadata from the event
-        console.log("Rating", eventProperties.rating);
-        console.log("Message", eventProperties.message);
+        console.log("Clicked", eventProperties.clicked);
+        const elemId = "Coffee";
+          const popupContent = document.getElementById(elemId);
+          popupContent.style.visibility = "visible";
       } else if (eventData.type === RiveEventType.OpenUrl) {
         console.log("Event name", eventData.name);
         window.open(eventData.url);
