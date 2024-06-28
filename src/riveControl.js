@@ -86,13 +86,13 @@ const r = new rive.Rive({
 
     r.on(EventType.RiveEvent, onRiveEventReceived);
 
-window.addEventListener(
+/*window.addEventListener(
   "resize",
   () => {
     r.resizeDrawingSurfaceToCanvas();
   },
   false
-);
+);*/
 
 
   function hideVid() {
